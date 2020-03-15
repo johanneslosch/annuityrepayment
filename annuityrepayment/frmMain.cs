@@ -21,7 +21,7 @@ namespace annuityrepayment
         private void BtnCalcAndShow_Click(object sender, EventArgs e)
         {
             //Convertierung nicht möglich string -> double
-            Calculate.calculate(Convert.ToDouble(txtTilgung.Text).ToString("0.00"), Convert.ToDouble(txtZinssatz.Text).ToString("0.00"), Convert.ToDouble(txtDarlehn.Text).ToString("0.00"));
+            Calculate.calculate(Convert.ToDouble(txtTilgung.Text)/100, Convert.ToDouble(txtZinssatz.Text) / 100, Convert.ToDouble(txtDarlehn.Text));
             frmShow frmShow = new frmShow();
             frmShow.Show();
         }
