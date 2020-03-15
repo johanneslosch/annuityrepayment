@@ -10,8 +10,12 @@ namespace annuityrepayment
     {
         public static void calculate(double __tilgung, double __zinssatz, double __darlehn)
         {
+            //TODO: clear file after each run
             double __repayment = (__darlehn * __zinssatz) + (__darlehn * __tilgung);
-             writeToFile("Year 1 - Repayment: " + __repayment.ToString());
+            
+             writeToFile("Year 1 - darlehn after: " + (__darlehn - __repayment));
+            double y2 = __darlehn - __repayment - __repayment;
+            writeToFile("Year 2 - darlehn after: " + y2);
 
             Console.WriteLine("tilgung " + __tilgung + " Zinssatz " + __zinssatz + "/ Darlehn " + __darlehn + "\n" + __repayment);
        }
