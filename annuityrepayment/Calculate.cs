@@ -8,9 +8,9 @@ namespace annuityrepayment
 {
     class Calculate
     {
-        public void test()
+        public static void calculate(Double tilgung, Double zinssatz, Double dalehn)
         {
-            Console.WriteLine();
+            Console.WriteLine("tilgung " + tilgung + " Zinssatz " + zinssatz + "/ Darlehn " + dalehn);
         }
     }
 }
