@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,11 @@ namespace annuityrepayment
         public frmShow()
         {
             InitializeComponent();
+            richTextBox1.Text = File.ReadAllText(@"../../test1.txt");
+            if (File.Exists(@"../../test1.txt"))
+            {
+                File.Delete(@"../../test1.txt");
+            }
         }
     }
 }

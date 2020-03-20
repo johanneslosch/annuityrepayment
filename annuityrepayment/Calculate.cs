@@ -22,7 +22,7 @@ namespace annuityrepayment
             zinsen = saldo * __zinssatz;
             annuitaet = tilgung + zinsen;
             restschuld = saldo - tilgung;
-            writeToFile(String.Format("Jahr {0}; Saldo: {1} €; Tilgung: {2} €; Zinsen: {3} €; Restschuld: {4} €", jahr, saldo, tilgung, zinsen, restschuld));
+            writeToFile(String.Format("Jahr {0}; Saldo: {1} €; Tilgung: {2} €; Zinsen: {3} €; Annuität: {4} €; Restschuld: {5} €", jahr, Math.Round(saldo, 2), Math.Round(tilgung, 2), Math.Round(zinsen, 2), Math.Round(annuitaet, 2), Math.Round(restschuld, 2)));
             do
             {
                 saldo = restschuld;
@@ -31,15 +31,16 @@ namespace annuityrepayment
                 restschuld = saldo - tilgung;
                 jahr++;
 
-                writeToFile(String.Format("Jahr {0}; Saldo: {1} €; Tilgung: {2} €; Zinsen: {3} €; Restschuld: {4} €", jahr, saldo, tilgung, zinsen, restschuld));
-                Console.Write(restschuld);
-                if(restschuld < annuitaet)
+                writeToFile(String.Format("Jahr {0}; Saldo: {1} €; Tilgung: {2} €; Zinsen: {3} €; Annuität: {4} €; Restschuld: {5} €", jahr, Math.Round(saldo, 2), Math.Round(tilgung, 2), Math.Round(zinsen, 2), Math.Round(annuitaet, 2), Math.Round(restschuld, 2)));
+                if (restschuld <= annuitaet)
                 {
                     saldo = restschuld;
                     zinsen = saldo * __zinssatz;
                     annuitaet = zinsen + restschuld;
+                    tilgung = restschuld + zinsen;
+                    restschuld = 0;
                     jahr++;
-                    writeToFile(String.Format("Jahr {0}; Saldo: {1} €; Tilgung: {2} €; Zinsen: {3} €; Restschuld: {4} €", jahr, saldo, tilgung, zinsen, restschuld));
+                    writeToFile(String.Format("Jahr {0}; Saldo: {1} €; Tilgung: {2} €; Zinsen: {3} €; Annuität: {4} €; Restschuld: {5} €", jahr, Math.Round(saldo, 2), Math.Round(tilgung, 2), Math.Round(zinsen, 2), Math.Round(annuitaet, 2), Math.Round(restschuld, 2)));
                     restschuld = 0;
                 }
             } while (restschuld > 0);
@@ -47,7 +48,7 @@ namespace annuityrepayment
 
         private static void writeToFile(String content)
         {
-            File.AppendAllText(@"../../test0.txt", content + Environment.NewLine);
+            File.AppendAllText(@"../../test1.txt", content + Environment.NewLine);
 
         }
     }
