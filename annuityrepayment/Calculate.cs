@@ -48,7 +48,7 @@ namespace annuityrepayment
 
         private static void writeToFile(String content)
         {
-            File.AppendAllText(@"../../test1.txt", content + Environment.NewLine);
+            File.AppendAllText(@".\test1.txt", content + Environment.NewLine);
 
         }
     }
