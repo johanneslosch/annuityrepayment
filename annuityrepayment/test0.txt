@@ -1,0 +1,12 @@
+Jahr 1; Saldo: 20000 €; 		Tilgung: 1600 €; 		Zinsen: 400 €; 			Restschuld: 18400 €
+Jahr 2; Saldo: 18400 €; 		Tilgung: 1632 €; 		Zinsen: 368 €; 			Restschuld: 16768 €
+Jahr 3; Saldo: 16768 €; 		Tilgung: 1664,64 €; 		Zinsen: 335,36 €; 		Restschuld: 15103,36 €
+Jahr 4; Saldo: 15103,36 €; 		Tilgung: 1697,9328 €; 		Zinsen: 302,0672 €; 		Restschuld: 13405,4272 €
+Jahr 5; Saldo: 13405,4272 €; 		Tilgung: 1731,891456 €; 	Zinsen: 268,108544 €; 		Restschuld: 11673,535744 €
+Jahr 6; Saldo: 11673,535744 €; 		Tilgung: 1766,52928512 €; 	Zinsen: 233,47071488 €; 	Restschuld: 9907,00645888 €
+Jahr 7; Saldo: 9907,00645888 €; 	Tilgung: 1801,8598708224 €; 	Zinsen: 198,1401291776 €; 	Restschuld: 8105,1465880576 €
+Jahr 8; Saldo: 8105,1465880576 €; 	Tilgung: 1837,89706823885 €; 	Zinsen: 162,102931761152 €; 	Restschuld: 6267,24951981875 €
+Jahr 9; Saldo: 6267,24951981875 €; 	Tilgung: 1874,65500960362 €; 	Zinsen: 125,344990396375 €; 	Restschuld: 4392,59451021513 €
+Jahr 10; Saldo: 4392,59451021513 €; 	Tilgung: 1912,1481097957 €; 	Zinsen: 87,8518902043026 €; 	Restschuld: 2480,44640041943 €
+Jahr 11; Saldo: 2480,44640041943 €; 	Tilgung: 1950,39107199161 €; 	Zinsen: 49,6089280083886 €; 	Restschuld: 530,05532842782 €
+Jahr 12; Saldo: 530,05532842782 €; 	Tilgung: 1950,39107199161 €; 	Zinsen: 10,6011065685564 €; 	Restschuld: 530,05532842782 €

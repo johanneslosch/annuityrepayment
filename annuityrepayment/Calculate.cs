@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Diagnostics;
 using System.IO;
 
 namespace annuityrepayment
@@ -11,7 +8,7 @@ namespace annuityrepayment
         public static void calculate(double __tilgung, double __zinssatz, double __darlehn)
         {
             int jahr = 1;
-            double saldo;
+            double saldo = __darlehn;
             double tilgung;
             double zinsen;
             double annuitaet = 0;
@@ -21,51 +18,36 @@ namespace annuityrepayment
             double __repayment = (__darlehn * __zinssatz) + (__darlehn * __tilgung);
             jahr = 1;
         
-            tilgung = __darlehn * __tilgung;
-            zinsen = __darlehn * __zinssatz;
+            tilgung = saldo * __tilgung;
+            zinsen = saldo * __zinssatz;
             annuitaet = tilgung + zinsen;
-            restschuld = __darlehn - tilgung;
-            writeToFile("Jahr " + jahr + "; Saldo: " + __darlehn + " €; Tilgung: " + tilgung + " €; Zinsen: " + zinsen + " €; Restschuld: " + restschuld + " €");
+            restschuld = saldo - tilgung;
+            writeToFile(String.Format("Jahr {0}; Saldo: {1} €; Tilgung: {2} €; Zinsen: {3} €; Restschuld: {4} €", jahr, saldo, tilgung, zinsen, restschuld));
             do
             {
-                Console.Write("\n");
-                Console.Write("----------");
-                /*calc second*/
                 saldo = restschuld;
                 zinsen = saldo * __zinssatz;
                 tilgung = annuitaet - zinsen;
                 restschuld = saldo - tilgung;
                 jahr++;
-                /*output*/
-                writeToFile("Jahr " + jahr + "; Saldo: " + saldo + " €; Tilgung: " + tilgung + " €; Zinsen: " + zinsen + " €; Restschuld: " + restschuld + " €");
-                Console.Write("\n");
-                Console.Write("Jahr: ");
-                Console.Write(jahr);
-                Console.Write("\n");
-                Console.Write("Saldo: ");
-                Console.Write(saldo);
-                Console.Write("\n");
-                Console.Write("Tilgung: ");
-                Console.Write(tilgung);
-                Console.Write("\n");
-                Console.Write("Zinsen: ");
-                Console.Write(zinsen);
-                Console.Write("\n");
-                Console.Write("Annuitaet: ");
-                Console.Write(annuitaet);
-                Console.Write("\n");
-                Console.Write("Restschuld: ");
+
+                writeToFile(String.Format("Jahr {0}; Saldo: {1} €; Tilgung: {2} €; Zinsen: {3} €; Restschuld: {4} €", jahr, saldo, tilgung, zinsen, restschuld));
                 Console.Write(restschuld);
+                if(restschuld < annuitaet)
+                {
+                    saldo = restschuld;
+                    zinsen = saldo * __zinssatz;
+                    annuitaet = zinsen + restschuld;
+                    jahr++;
+                    writeToFile(String.Format("Jahr {0}; Saldo: {1} €; Tilgung: {2} €; Zinsen: {3} €; Restschuld: {4} €", jahr, saldo, tilgung, zinsen, restschuld));
+                    restschuld = 0;
+                }
             } while (restschuld > 0);
-
-
-
-                Console.WriteLine("tilgung " + __tilgung + " Zinssatz " + __zinssatz + "/ Darlehn " + __darlehn + "\n" + __repayment);
        }
 
         private static void writeToFile(String content)
         {
-            File.AppendAllText(@"../../test1.txt", content + Environment.NewLine);
+            File.AppendAllText(@"../../test0.txt", content + Environment.NewLine);
 
         }
     }
