@@ -1,6 +1,3 @@
-# annuityrepayment
-A school project in Business informatics
-
 ## Was ist Tilgung (Geldverkehr)?
 
 (Wikipedia) Tilgung nennt man im Finanzwesen die
