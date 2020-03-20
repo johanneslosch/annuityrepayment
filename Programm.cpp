@@ -29,12 +29,11 @@ zinsen = saldo * zinssatz / 100;
 annuitaet = tilgung + zinsen;
 restschuld = saldo - tilgung;
 
-cout << endl << "Jahr: " << jahr;
-cout << endl << "Saldo: " << saldo;
-cout << endl << "Tilgung: " << tilgung;
-cout << endl << "Zinsen: " << zinsen;
-cout << endl << "Annuit\204t: " << annuitaet;
-cout << endl << "Restschuld: " << restschuld;
+cout << endl << "Saldo: " << floor(saldo * 100.0 + .5 ) / 100.0 << " €";
+cout << endl << "Tilgung: " << floor(tilgung * 100.0 + .5 ) / 100.0 << " €";
+cout << endl << "Zinsen: " << floor(zinsen * 100.0 + .5 ) / 100.0 << " €";
+cout << endl << "Annuit\204t: " << floor(annuitaet * 100.0 + .5 ) / 100.0 << " €";
+cout << endl << "Restschuld: " << floor(restschuld * 100.0 + .5 ) / 100.0 << " €";
 
 do {
 cout << endl << "----------";
@@ -46,11 +45,11 @@ restschuld = saldo - tilgung;
 jahr++;
 /*output*/
 cout << endl << "Jahr: " << jahr;
-cout << endl << "Saldo: " << saldo;
-cout << endl << "Tilgung: " << tilgung;
-cout << endl << "Zinsen: " << zinsen;
-cout << endl << "Annuit\204t: " << annuitaet;
-cout << endl << "Restschuld: " << restschuld;
+cout << endl << "Saldo: " << floor(saldo * 100.0 + .5 ) / 100.0 << " €";
+cout << endl << "Tilgung: " << floor(tilgung * 100.0 + .5 ) / 100.0 << " €";
+cout << endl << "Zinsen: " << floor(zinsen * 100.0 + .5 ) / 100.0 << " €";
+cout << endl << "Annuit\204t: " << floor(annuitaet * 100.0 + .5 ) / 100.0 << " €";
+cout << endl << "Restschuld: " << floor(restschuld * 100.0 + .5 ) / 100.0 << " €";
 if (restschuld <= annuitaet){
 zinsen = saldo * zinssatz / 100;
 tilgung = restschuld;
@@ -59,11 +58,11 @@ jahr++;
 restschuld = 0;
 cout << endl << "----------";
 cout << endl << "Jahr: " << jahr;
-cout << endl << "Saldo: " << saldo;
-cout << endl << "Tilgung: " << tilgung;
-cout << endl << "Zinsen: " << zinsen;
-cout << endl << "Annuit\204t: " << annuitaet;
-cout << endl << "Restschuld: " << restschuld;
+cout << endl << "Saldo: " << floor(saldo * 100.0 + .5 ) / 100.0 << " €";
+cout << endl << "Tilgung: " << floor(tilgung * 100.0 + .5 ) / 100.0 << " €";
+cout << endl << "Zinsen: " << floor(zinsen * 100.0 + .5 ) / 100.0 << " €";
+cout << endl << "Annuit\204t: " << floor(annuitaet * 100.0 + .5 ) / 100.0 << " €";
+cout << endl << "Restschuld: " << floor(restschuld * 100.0 + .5 ) / 100.0 << " €";
 }
 } while (restschuld > 0);
 	getchar();
