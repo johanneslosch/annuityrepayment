@@ -1,5 +1,0 @@
-Year 1 - Repayment: 2000
-Year 1 - darlehn after: 18000
-Year 2 - darlehn after: 18000
-Year 1 - darlehn after: 18000
-Year 2 - darlehn after: 16000
