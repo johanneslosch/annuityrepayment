@@ -1,13 +1,14 @@
-// Dominik Körner - WAI18
 #include <iostream>
+
 using namespace std;
 int main() {
 
 /*int for input*/
-int darlehen, tilgungssatz, zinssatz;
+double darlehen, tilgungssatz, zinssatz;
 
 /*int for calc*/
-int jahr, saldo, tilgung, zinsen, annuitaet, restschuld;
+int jahr; 
+double saldo, tilgung, zinsen, annuitaet, restschuld;
 
 cout << endl << "Geben Sie das Darlehen ein: ";
 cin >> darlehen;
@@ -32,7 +33,7 @@ cout << endl << "Jahr: " << jahr;
 cout << endl << "Saldo: " << saldo;
 cout << endl << "Tilgung: " << tilgung;
 cout << endl << "Zinsen: " << zinsen;
-cout << endl << "Annuitaet: " << annuitaet;
+cout << endl << "Annuit\204t: " << annuitaet;
 cout << endl << "Restschuld: " << restschuld;
 
 do {
@@ -48,9 +49,22 @@ cout << endl << "Jahr: " << jahr;
 cout << endl << "Saldo: " << saldo;
 cout << endl << "Tilgung: " << tilgung;
 cout << endl << "Zinsen: " << zinsen;
-cout << endl << "Annuitaet: " << annuitaet;
+cout << endl << "Annuit\204t: " << annuitaet;
 cout << endl << "Restschuld: " << restschuld;
-
+if (restschuld <= annuitaet){
+zinsen = saldo * zinssatz / 100;
+tilgung = restschuld;
+annuitaet = tilgung + zinsen;
+jahr++;
+restschuld = 0;
+cout << endl << "----------";
+cout << endl << "Jahr: " << jahr;
+cout << endl << "Saldo: " << saldo;
+cout << endl << "Tilgung: " << tilgung;
+cout << endl << "Zinsen: " << zinsen;
+cout << endl << "Annuit\204t: " << annuitaet;
+cout << endl << "Restschuld: " << restschuld;
+}
 } while (restschuld > 0);
 	getchar();
 	return 0; 
