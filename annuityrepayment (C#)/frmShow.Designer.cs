@@ -28,22 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShow));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.richTextBox1.Location = new System.Drawing.Point(12, 12);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(758, 359);
+            this.richTextBox1.Size = new System.Drawing.Size(789, 392);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(658, 377);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F);
+            this.button1.Location = new System.Drawing.Point(689, 410);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 32);
             this.button1.TabIndex = 1;
@@ -55,14 +57,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 421);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(810, 444);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmShow";
-            this.ShowIcon = false;
             this.Text = "Annuitätentilgung";
             this.ResumeLayout(false);
 

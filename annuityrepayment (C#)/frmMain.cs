@@ -6,6 +6,21 @@ namespace annuityrepayment
     public partial class frmMain : Form
     {
         public static double darlehn, year, tilgung, zinssatz, repayment;
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            frmTutorial frmTutorial = new frmTutorial();
+            frmTutorial.Show();
+            Hide();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            frmInfo frmInfo = new frmInfo();
+            frmInfo.Show();
+            Hide();
+        }
+
         public frmMain()
         {
             InitializeComponent();
