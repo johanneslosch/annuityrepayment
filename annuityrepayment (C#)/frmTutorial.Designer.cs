@@ -42,9 +42,9 @@
             this.label1.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(15, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(559, 20);
+            this.label1.Size = new System.Drawing.Size(569, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "1. Darlehnssume in das dafür vorgesehende Feld eingeben";
+            this.label1.Text = "1. Darlehnssumme in das dafür vorgesehende Feld eingeben";
             // 
             // label2
             // 
@@ -79,7 +79,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(580, 14);
+            this.button1.Location = new System.Drawing.Point(595, 14);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 124);
             this.button1.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(740, 150);
+            this.ClientSize = new System.Drawing.Size(755, 150);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
